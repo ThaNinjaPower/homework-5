@@ -1,7 +1,10 @@
 $(document).ready(function() {
-    var savedSchedule;
-    if (localStorage.getItem("savedSchedule") !== undefined) {
-        savedSchedule = localStorage.getItem("savedSchedule");
+    var scheduleList;
+    if (localStorage.getItem("savedSchedule") == null) {
+        scheduleList = {9:"", 10:"", 11:"", 12:"", 13:"", 14:"", 15:"", 16:"", 17:""};
+    }
+    else {
+        scheduleList = JSON.parse(localStorage.getItem("savedSchedule"));
     }
 
     var currentDate = moment().format('MMMM Do YYYY');
@@ -13,7 +16,8 @@ $(document).ready(function() {
 
     var i = 0;
     $(".time-block").each(function() {
-        var timeBlockTime = moment().set('hour', 9 + i).set('minute', 0).set('second', 0);
+        var hourNum = 9 + i;
+        var timeBlockTime = moment().set('hour', hourNum).set('minute', 0).set('second', 0);
         console.log(`Card date: ${timeBlockTime}`);
 
         if (timeBlockTime.isSame(currentTime, 'hour')) {
@@ -26,12 +30,24 @@ $(document).ready(function() {
             $(this).find(".description").addClass("future");
         }
 
-        console.log(`Same as current time? ${timeBlockTime.isSame(currentTime, 'hour')}`);
+        var importedInput = scheduleList[hourNum];
+        console.log("Imported note: " + importedInput);
 
+        $(this).find(".notes").val(importedInput);
         i++;
     })
 
     $(".saveBtn").on("click", function() {
+        var input = $(this).parent().siblings(".description").find(".notes").val();
+        console.log(input);
 
+        var hour = parseInt($(this).parents(".time-block").find(".hour").attr("hour"));
+        console.log(hour);
+
+        scheduleList[hour] = input;
+
+        console.log(scheduleList);
+
+        localStorage.setItem("savedSchedule", JSON.stringify(scheduleList));
     });
 });
