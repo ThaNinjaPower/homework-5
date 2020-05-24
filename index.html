@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container">
+    <!-- Timeblocks go here -->
+    <!-- 9 AM card -->
+    <div class="row card time-block">
+      <div class="column hour" style="height:100%;width:10%">9AM</div>
+      <div class="column description future" style="height:100%; width:80%; float:center"><textarea class="notes" rows="4" style="width:100%;"></textarea>
+      </div>
+      <div class="column saveBtn" style="height:100%; width:10%; float:left"><button class="saveBtn"
+          style="height:100%; width:100%"><svg class="bi bi-calendar2-check-fill" width="1em" height="1em"
+            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zm-2 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-1zm8.854 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 10 AM card -->
+    <div class="row card time-block">
+      <div class="column hour" style="height:100%;width:10%">10AM</div>
+      <div class="column description" style="height:100%; width:80%; float:center"><textarea class="notes" rows="4" style="width:100%;"></textarea>
+      </div>
+      <div class="column saveBtn" style="height:100%; width:10%; float:left"><button class="saveBtn"
+          style="height:100%; width:100%"><svg class="bi bi-calendar2-check-fill" width="1em" height="1em"
+            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zm-2 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-1zm8.854 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 11 AM card -->
+    <div class="row card time-block">
+      <div class="column hour" style="height:100%;width:10%">11AM</div>
+      <div class="column description" style="height:100%; width:80%; float:center"><textarea class="notes" rows="4" style="width:100%;"></textarea>
+      </div>
+      <div class="column saveBtn" style="height:100%; width:10%; float:left"><button class="saveBtn"
+          style="height:100%; width:100%"><svg class="bi bi-calendar2-check-fill" width="1em" height="1em"
+            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zm-2 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-1zm8.854 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 12 PM card -->
+    <div class="row card time-block">
+      <div class="column hour" style="height:100%;width:10%">12PM</div>
+      <div class="column description" style="height:100%; width:80%; float:center"><textarea class="notes" rows="4" style="width:100%;"></textarea>
+      </div>
+      <div class="column saveBtn" style="height:100%; width:10%; float:left"><button class="saveBtn"
+          style="height:100%; width:100%"><svg class="bi bi-calendar2-check-fill" width="1em" height="1em"
+            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zm-2 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-1zm8.854 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 1 PM card -->
+    <div class="row card time-block">
+      <div class="column hour" style="height:100%;width:10%">1PM</div>
+      <div class="column description" style="height:100%; width:80%; float:center"><textarea class="notes" rows="4" style="width:100%;"></textarea>
+      </div>
+      <div class="column saveBtn" style="height:100%; width:10%; float:left"><button class="saveBtn"
+          style="height:100%; width:100%"><svg class="bi bi-calendar2-check-fill" width="1em" height="1em"
+            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zm-2 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-1zm8.854 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 2 PM card -->
+    <div class="row card time-block">
+      <div class="column hour" style="height:100%;width:10%">2PM</div>
+      <div class="column description" style="height:100%; width:80%; float:center"><textarea class="notes" rows="4" style="width:100%;"></textarea>
+      </div>
+      <div class="column saveBtn" style="height:100%; width:10%; float:left"><button class="saveBtn"
+          style="height:100%; width:100%"><svg class="bi bi-calendar2-check-fill" width="1em" height="1em"
+            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zm-2 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-1zm8.854 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 3 PM card -->
+    <div class="row card time-block">
+      <div class="column hour" style="height:100%;width:10%">3PM</div>
+      <div class="column description" style="height:100%; width:80%; float:center"><textarea class="notes" rows="4" style="width:100%;"></textarea>
+      </div>
+      <div class="column saveBtn" style="height:100%; width:10%; float:left"><button class="saveBtn"
+          style="height:100%; width:100%"><svg class="bi bi-calendar2-check-fill" width="1em" height="1em"
+            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zm-2 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-1zm8.854 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 4 PM card -->
+    <div class="row card time-block">
+      <div class="column hour" style="height:100%;width:10%">4PM</div>
+      <div class="column description" style="height:100%; width:80%; float:center"><textarea class="notes" rows="4" style="width:100%;"></textarea>
+      </div>
+      <div class="column saveBtn" style="height:100%; width:10%; float:left"><button class="saveBtn"
+          style="height:100%; width:100%"><svg class="bi bi-calendar2-check-fill" width="1em" height="1em"
+            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zm-2 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-1zm8.854 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 5 PM card -->
+    <div class="row card time-block">
+      <div class="column hour" style="height:100%;width:10%">5PM</div>
+      <div class="column description" style="height:100%; width:80%; float:center"><textarea class="notes" rows="4" style="width:100%;"></textarea>
+      </div>
+      <div class="column saveBtn" style="height:100%; width:10%; float:left"><button class="saveBtn"
+          style="height:100%; width:100%"><svg class="bi bi-calendar2-check-fill" width="1em" height="1em"
+            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zm-2 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-1zm8.854 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
